@@ -1,0 +1,14 @@
+const express = require('express');
+const logger = require('./middlewares/loggerMiddleware');
+const { notFound, errorMiddleware } = require('./middlewares/errorMiddleware');
+const taskRoutes = require('./routes/taskRoutes');
+const reportRoutes = require('./routes/reportRoutes');
+const app = express();
+app.use(logger);
+app.use(express.json({ limit: '100kb' }));
+app.get('/', (req,res) => res.json({success:true,message:'TaskFlow API çalışıyor.'}));
+app.use('/tasks',taskRoutes);
+app.use('/reports',reportRoutes);
+app.use(notFound);
+app.use(errorMiddleware);
+module.exports = app;

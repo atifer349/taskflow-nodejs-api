@@ -1,0 +1,11 @@
+const router = require('express').Router();
+const ctrl = require('../controllers/taskController');
+const validateTask = require('../middlewares/validationMiddleware');
+router.get('/', ctrl.list);
+router.get('/search', ctrl.search);
+router.get('/assignee/:name', ctrl.assignee);
+router.get('/:id', ctrl.detail);
+router.post('/', validateTask, ctrl.create);
+router.put('/:id', validateTask, ctrl.update);
+router.delete('/:id', ctrl.remove);
+module.exports = router;
