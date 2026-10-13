@@ -58,7 +58,7 @@ Yanıt içindeki `data.id` değeriyle GET/PUT/DELETE isteklerini test edebilirsi
 - `docs/veri-modeli.md`
 - `docs/api-dokumantasyonu.md`
 - `postman/TaskFlow.postman_collection.json`
-- `docs/postman-screenshots/` klasörüne kendi Postman ekran görüntülerinizi ekleyin.
+- `docs/postman-ekran-goruntuleri/` klasörüne kendi Postman ekran görüntülerinizi ekleyin.
 
 ## Bilinen sınırlar
 `tasks.json` basit eğitim deposudur; çoklu Node.js instance'ları ve production için DB önerilir. API kimlik doğrulaması içermez. Bu haliyle kamuya açık sunucuda çalıştırmayın.
